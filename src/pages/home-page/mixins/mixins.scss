@@ -29,6 +29,9 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 110%;
+}
+
+@mixin adnotation-fonts {
   span {
     font-weight: 400;
     font-size: 12px;

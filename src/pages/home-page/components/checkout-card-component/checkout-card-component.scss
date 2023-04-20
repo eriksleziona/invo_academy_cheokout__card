@@ -24,7 +24,6 @@
   & &__product-line {
     display: flex;
     justify-content: space-between;
-
     padding: 40px 0 24px 0;
   }
 
@@ -45,6 +44,7 @@
   & &__product-price {
     margin-top: 20px;
     @include product-price-fonts-adnotation;
+    @include adnotation-fonts;
   }
 
   & &__product-image-container {
@@ -54,5 +54,17 @@
     width: 80px;
     height: 80px;
     @include product-logo-sizing;
+  }
+
+  & &__checkout-product {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+  }
+  & &__checkout-title {
+    @include title-desc-fonts-card-component;
+  }
+  & &__checkout-price {
+    @include adnotation-fonts;
   }
 }
