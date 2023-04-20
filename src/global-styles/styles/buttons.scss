@@ -1,3 +1,48 @@
 button {
-   
+  // give your buttons proper borders
+  border: none;
+  border-radius: 60px;
+
+  // give your buttons proper dimensions
+  width: 100%;
+  height: 56px;
+
+  // make the content centerd
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // add transition for smooth hover animation
+  transition: 0.2s;
+
+  &:hover {
+    // add proper behaviour on hover
+    cursor: pointer;
+  }
+
+  &.btn-primary {
+    // specify primary button parameters
+    background-color: var(--primary-color);
+    color: var(--color-white-100);
+    font-weight: 700;
+
+    &:hover {
+      // add primary button specific behaviour on hover
+      background-color: var(--primary-color-dark);
+    }
+  }
+
+  &.btn-secondary {
+    // specify secondary button parameters
+    background-color: var(--background-color);
+    color: var(--on-background-color-light);
+    border: 1px solid var(--border-color);
+    font-weight: 700;
+
+    &:hover {
+      // add secondary button specific behaviour on hover
+      cursor: pointer;
+      background-color: var(--background-color-dark);
+    }
+  }
 }

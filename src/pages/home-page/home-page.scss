@@ -1,13 +1,14 @@
 /// Homepage Styles File
 /// Here we import all the Styles files we need for our Homepage.
-/// 
-/// 
+///
+///
 
-@use './components/checkout-card-component/checkout-card-component.scss';
+@use "./components/checkout-card-component/checkout-card-component.scss";
 
 #home-page {
+  width: 100%;
   height: 100%;
-
+  padding: 237px 0;
   display: flex;
   flex-direction: column;
   align-items: center;

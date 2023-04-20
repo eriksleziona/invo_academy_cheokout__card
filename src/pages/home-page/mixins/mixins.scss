@@ -1,0 +1,49 @@
+@mixin title-fonts-card-component {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: 0%;
+}
+
+@mixin title-desc-fonts-card-component {
+  font-size: 1rem;
+  line-height: 110%;
+  opacity: 0.5;
+}
+
+@mixin product-line-title-fonts {
+  font-size: 1.12rem;
+  line-height: 110%;
+  font-weight: 600;
+}
+
+@mixin product-line-desc-fonts {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 110%;
+  opacity: 0.5;
+}
+
+@mixin product-price-fonts-adnotation {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 110%;
+  span {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 110%;
+    opacity: 0.5;
+  }
+}
+
+@mixin product-logo-sizing {
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%) translateY(-50%);
+    width: 40px;
+    height: 40px;
+  }
+}
