@@ -1,10 +1,15 @@
 @import "../../mixins/mixins.scss";
 
+$tablet: 834px;
+$big_mobile: 520px;
+$regular_mobile: 376px;
+$small_mobile: 320px;
+
 .checkout-card-component {
-  width: 100%;
-  height: 100%;
-  max-width: 520px;
-  max-height: 550px;
+  //width: 100%;
+  //height: 100%;
+  width: 520px;
+  height: 550px;
   padding: 40px;
   border-radius: var(--card-border-radius);
   background-color: var(--card-background-color);
@@ -83,5 +88,22 @@
   }
   & &__checkout-total-price {
     @include adnotation-fonts;
+  }
+
+  @media (max-width: $big_mobile) {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    & &__summary {
+      flex-grow: 2;
+    }
+  }
+
+  @media (max-width: $regular_mobile) {
+    padding: 40px 24px;
+  }
+  @media (max-width: $small_mobile) {
+    padding: 40px 10px;
   }
 }

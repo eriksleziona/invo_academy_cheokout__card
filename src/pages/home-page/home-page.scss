@@ -6,6 +6,8 @@
 @use "./components/checkout-card-component/checkout-card-component.scss";
 @use "components/button-component/button-component.scss";
 
+$tablet: 834px;
+$big_mobile: 520px;
 #home-page {
   width: 100%;
   height: 100%;
@@ -13,4 +15,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: $tablet) {
+    padding: 322px 0;
+  }
+
+  @media (max-width: $big_mobile) {
+    padding: 0;
+  }
 }
