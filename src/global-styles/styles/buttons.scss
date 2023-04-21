@@ -14,7 +14,13 @@ button {
 
   // add transition for smooth hover animation
   transition: 0.2s;
+  &:disabled {
+    opacity: 0.5;
 
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
   &:hover {
     // add proper behaviour on hover
     cursor: pointer;
@@ -25,7 +31,50 @@ button {
     background-color: var(--primary-color);
     color: var(--color-white-100);
     font-weight: 700;
+    position: relative;
 
+    &:not(:disabled):hover {
+      cursor: pointer;
+      background-color: var(--primary-color-dark);
+    }
+
+    &[data-loading="1"] {
+      &:hover {
+        cursor: not-allowed;
+        background-color: var(--primary-color);
+      }
+      .btn-primary__text {
+        display: none;
+        height: 65%;
+      }
+
+      .btn-primary__loader {
+        display: block;
+
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%) translateY(-50%);
+
+          object-fit: fill;
+        }
+      }
+    }
+    &[data-loading="0"] {
+      .btn-primary__text {
+        display: block;
+      }
+
+      .btn-primary__loader {
+        display: none;
+
+        img {
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
     &:hover {
       // add primary button specific behaviour on hover
       background-color: var(--primary-color-dark);
@@ -41,13 +90,17 @@ button {
     color: var(--on-background-color-light);
     border: 1px solid var(--border-color);
     font-weight: 700;
-
-    &:hover {
-      // add secondary button specific behaviour on hover
+    &:not(:disabled):hover {
       cursor: pointer;
       color: var(--background-color-dark);
       border-color: var(--background-color-dark);
     }
+    /*     &:hover {
+      // add secondary button specific behaviour on hover
+      cursor: pointer;
+      color: var(--background-color-dark);
+      border-color: var(--background-color-dark);
+    } */
 
     &:active {
       color: var(--background-color-pressed);
