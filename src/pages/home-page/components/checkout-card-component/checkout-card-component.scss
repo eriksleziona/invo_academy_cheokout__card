@@ -61,10 +61,27 @@
     display: flex;
     justify-content: space-between;
   }
+
+  & &__checkout-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  & &__checkout-total-title {
+    font-weight: 700;
+    @include product-total-price-fonsts;
+  }
+  & &__checkout-total-price {
+    @include product-total-price-fonsts;
+  }
   & &__checkout-title {
+    font-weight: 500;
     @include title-desc-fonts-card-component;
   }
   & &__checkout-price {
+    @include adnotation-fonts;
+  }
+  & &__checkout-total-price {
     @include adnotation-fonts;
   }
 }
