@@ -1,5 +1,5 @@
+let isLoading = false;
 export const checkoutComponent = () => {
-  let isLoading = false;
   const checkoutCardComponent = document.querySelector(
     ".checkout-card-component"
   );
@@ -12,11 +12,6 @@ export const checkoutComponent = () => {
 
   // Add event listener to the confirm button
   confirmButton.addEventListener("click", () => {
-    // set the data-loading attribute to 1
-    // in order to change the buttons state to loading
-    confirmButton.setAttribute("data-loading", "1");
-    isLoading = true;
-
     if (isLoading) {
       // if the payment is already processing
       // log the message and don't continue the function
@@ -24,7 +19,10 @@ export const checkoutComponent = () => {
 
       return;
     }
-
+    // set the data-loading attribute to 1
+    // in order to change the buttons state to loading
+    confirmButton.setAttribute("data-loading", "1");
+    isLoading = true;
     cancelButton.setAttribute("disabled", "disabled");
   });
 };
